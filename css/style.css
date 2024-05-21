@@ -1,0 +1,798 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'montserrat', 'Poppins', 'Arial';
+}
+
+body {
+	height: 100%;
+	min-height: 100%;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	max-width: 1440px;
+	margin: auto;
+}
+
+main {
+	flex-grow: 1;
+}
+
+
+/* Logo left */
+
+header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.logo {
+	left: 164px;
+	width: 740px;
+}
+
+.header-container {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	height: 112px;
+	padding-right: 48px;
+	padding-left: 164px;
+	background: white;
+}
+
+.property-icon {
+	box-sizing: border-box;
+	display: block;
+	width: 40px;
+	max-width: initial;
+	height: 40px;
+	margin-right: 15px;
+}
+
+.property-title {
+	flex: 0 0 auto;
+	margin-left: 14px;
+	font: 700 20px 'Poppins';
+	color: black;
+}
+
+/* Logo right */
+.navbar_head {
+	display: flex;
+	flex-direction: column;
+}
+
+.navbar-container {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	gap: 34px;
+	align-items: center;
+	justify-content: flex-start;
+	min-width: 700px;
+	padding: 47px 28px 754px;
+	background: url("../images/header_house.png") no-repeat 50% / cover;
+	border: none;
+
+}
+
+.navigation-link-style {
+	flex: 0 0 auto;
+	font: 500 15px 'Poppins';
+	color: black;
+	text-decoration: none;
+}
+
+/* Explore */	 
+ .header_explore {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	padding: 121px 56px 181px 164px;
+ }
+ 
+ .desert-oasis-heading {
+	flex: 0 0 auto;
+	font: 700 48px/62px 'Poppins';
+	color: black;
+	text-align: left;
+ }
+ 
+ .property-description-text-style_header {
+	flex: 0 0 auto;
+	margin-top: 35px;
+	font: 400 18px/28.5px 'Poppins';
+	color: black;
+	text-align: left;
+ }
+
+ .explore_buttom {
+	box-sizing: border-box;
+  display: block;
+  max-width: 200px;
+  height: 50px;
+  font: 700 20px 'Montserrat';
+  color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  background: #3456FE;
+  border: none;
+  box-shadow: 15px 15px 30px rgba(50, 80, 220, 0.25);
+
+  margin-top: 35px;
+ }
+
+ /* footer */
+
+ .property_footer_city {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: flex-end;
+	box-sizing: border-box;
+	height: 1150px;
+	background: url("../images/city_footer.png"), #3456FE;
+	background-size: 1007px /cover;
+	background-repeat: no-repeat;
+ }
+
+ .property-hub-style {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	
+	padding: 137px 204px 80px 164px;
+	background: #3456FE;
+ }
+
+ .strategic-container {
+	box-sizing: border-box;
+	min-width: 740px;
+	padding-right: 80px;
+	padding-left: 80px;
+	background: black;
+ }
+
+ .property-services-section1 {
+	box-sizing: border-box;
+	max-width: 497px;
+	padding-top: 126px;
+	padding-bottom: 208px;
+ }
+ 
+ .property-services-section {
+	box-sizing: border-box;
+	width: 100%;
+ }
+ 
+ .hero-text {
+	font: 700 48px 'Montserrat';
+	color: white;
+	
+ }
+ 
+ .property-description-style {
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 20px;
+	font: 400 20px 'Poppins';
+	color: white;
+	text-align: left;
+	
+ }
+ 
+ .email-form-container {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 33px;
+	margin-top: 33px;
+	background: white;
+	border-radius: 10px;
+ }
+ 
+ .email-label-text-style {
+	flex: 0 0 auto;
+	font: 400 15px 'Montserrat';
+	color: gray;
+	
+ }
+
+ .email-submit-button {
+	flex: 0 0 auto;
+	border: none;
+	border-radius: 10px;
+	font: 700 20px "Montserrat";
+	background: #3456FE;
+	box-sizing: border-box;
+	display: block;
+	width: 149px;
+	height: 48px;
+	color: white;
+	cursor: pointer;
+  }
+ 
+ .strategic-container {
+	box-sizing: border-box;
+	min-width: 740px;
+	padding-right: 80px;
+	padding-left: 80px;
+	background: black;
+ }
+ 
+ .property-services-section1 {
+	box-sizing: border-box;
+	max-width: 497px;
+	padding-top: 126px;
+	padding-bottom: 208px;
+ }
+ 
+ .property-services-section {
+	box-sizing: border-box;
+	width: 100%;
+ }
+ 
+ .hero-text {
+	font: 700 48px 'Montserrat';
+	color: white;
+	
+ }
+  
+ .email-form-container {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 33px;
+	margin-top: 33px;
+	background: white;
+	border-radius: 10px;
+ }
+ 
+ .email-label-text-style {
+	flex: 0 0 auto;
+	font: 400 15px 'Montserrat';
+	color: darkslategrey;
+	
+ }
+ 
+ .property-card {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	padding-right: 205px;
+ }
+ 
+ .property-info-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+ }
+ 
+ .property-title_footer {
+	flex: 0 0 auto;
+	margin-left: 16px;
+	font: 700 20px 'Poppins';
+	color: white;
+ }
+ 
+ .property-description-style {
+	box-sizing: border-box;
+	max-width: 375px;
+	margin-top: 30px;
+	font: 400 20px 'Poppins';
+	color: white;
+	text-align: left;
+ }
+ 
+ .property-listing-info-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	padding-right: 15px;
+ }
+ 
+ .header-title-bold {
+	font: 700 20px 'Montserrat';
+	color: white;
+ }
+ 
+ .international-site-list {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	gap: 17px;
+
+	box-sizing: border-box;
+	/* max-width: 137px; */
+	margin-top: 21px;
+	font: 400 20px/33px 'Montserrat';
+	color: white;
+	text-align: left;
+ }
+ 
+
+ .partner-list-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	/* width: 228px; */
+	/* padding-top: 7px; */
+	padding-right: 15px;
+	padding-left: 15px;
+ }
+ 
+ .partner-sites-list {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	gap: 17px;
+
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 21px;
+	font: 400 20px/33px 'Montserrat';
+	color: white;
+	text-align: left;
+ }
+ 
+
+ /* 1 SECTION */
+ 
+.section_house_container {
+	background: #F8F8FA;
+	padding: 100px 164px 66px 164px;
+}
+ 
+ .description_card {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 175px;
+ }
+ 
+ .title_description_card {
+	flex: 0 0 auto;
+	font: 700 38px 'Poppins';
+	color: black;
+	text-align: left;
+ }
+ 
+ .text_description_card {
+	box-sizing: border-box;
+	max-width: 506px;
+	font: 400 18px 'Poppins';
+	color: #626161;
+	text-align: left;
+ }
+ 
+ .structure_card_container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 40px;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 42px;
+ }
+ 
+ .customer_card {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	gap: 10px;
+ }
+ 
+ .customer_img {
+	display: block;
+	flex: 0 0 auto;
+	height: 215px;
+	width: 344px;
+	border: none;
+	border-radius: 20px;
+	object-fit: cover;
+	margin-bottom:17px;
+ }
+  
+ .customer_name {
+	flex: 0 0 auto;
+	font: 700 20px/24px 'Montserrat';
+	color: black;
+ }
+ 
+ .customer_address {
+	flex: 0 0 auto;
+	font: 400 18px/21.5px 'Montserrat';
+	color: black;
+ }
+ 
+ .customer_money {
+	flex: 0 0 auto;
+	font: 700 18px/21.5px 'Montserrat';
+	color: black;
+ }
+
+ /* 2 SECTION */
+ 
+ .real-estate-empire-layout {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	padding: 34px 0px 58px 164px;
+ }
+ 
+ .hero-text-heading {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	font: 700 38px  "Poppins";
+	color: black;
+	text-align: left;
+ }
+ 
+ .real-estate-card {
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: nowrap;
+	flex: 0 0 auto;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: flex-start;
+	margin-top: 58px;
+	overflow: hidden;
+ }
+ 
+ .real-estate-info-container {
+	box-sizing: border-box;
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	padding: 154px 96px 34px 0px ;
+ }
+ 
+ .empire-title {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	font: 700 24px 'Montserrat';
+	color: black;
+ }
+ 
+ .property-description-text-style {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	max-width: 346px;
+	margin-top: 40px;
+	font: 400 18px 'Poppins';
+	color: #626161;
+	text-align: left;
+ }
+ 
+ .property-details-card {
+	box-sizing: border-box;
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+ }
+ 
+ .image-container-rounded {
+	box-sizing: border-box;
+	display: block;
+	width: 616px;
+	height: 456px;
+	border: none;
+	border-radius: 20px;
+	object-fit: cover;
+ }
+ 
+ .strategic-info-box {
+	box-sizing: border-box;
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: flex-start;
+	margin-left: 56px;
+	
+ }
+ 
+ .rounded-image-container {
+	box-sizing: border-box;
+	display: block;
+	max-width: 616px;
+	height: 456px;
+	border: none;
+	border-radius: 20px;
+	object-fit: cover;
+ }
+
+ .button_read_more {
+	flex: 0 0 auto;
+	border: none;
+	font: 700 20px "Montserrat";
+	background: #3456FE;
+	box-sizing: border-box;
+	display: block;
+	width: 200px;
+	min-width: 200px;
+	height: 50px;
+	margin-top: 49px;
+	color: white;
+	cursor: pointer;
+ }
+
+ /* 3 SECTION  */
+
+ .royal-estate-style {
+	box-sizing: border-box;
+	min-width: 1440px;
+	padding-top: 42px;
+	padding-bottom: 104px;
+	background: black;
+ }
+ 
+ .hero-title-text-style {
+	padding-right: 48px;
+	padding-left: 163px;
+	font: 70 38px 'Poppins';
+	color: white;
+	text-align: left;
+	letter-spacing: 0.76px;
+ }
+ 
+ .strategic-home-layout {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	margin-top: 58px;
+ }
+ 
+ .real-estate-empire-card {
+	box-sizing: border-box;
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	width: 604px;
+	padding: 462px 17px 88px 376px;
+	background: url("../images/house7.png")
+	no-repeat 50% / cover;
+	border: none;
+	border-radius: 20px;
+ }
+ 
+ .image-container {
+	box-sizing: border-box;
+	display: block;
+	flex: 0 0 auto;
+	max-width: initial;
+	height: 248px;
+	border: none;
+	object-fit: cover;
+ }
+ 
+ .real-estate-card1 {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	align-items: stretch;
+	align-self: center;
+	justify-content: center;
+	margin-left: 2px;
+ }
+ 
+ .real-estate-card_3 {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	align-self: center;
+	max-width: 482px;
+	padding-right: 93px;
+	padding-left: 93px;
+ }
+ 
+ .real-estate-empire-heading {
+	font: 700 24px 'Montserrat';
+	color: white;
+ }
+ 
+ .property-description-style_3 {
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 40px;
+	font: 400 18px 'Poppins';
+	color: white;
+	text-align: left;
+ }
+ 
+ .primary-button {
+	box-sizing: border-box;
+	display: block;
+	width: 200px;
+	min-width: 200px;
+	height: 50px;
+	margin-top: 56px;
+	font: 700 20px 'Montserrat';
+	color: white;
+	cursor: pointer;
+	background: #3456FE;
+	border: none;
+ }
+ 
+ .property-gallery-container {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: row;
+	gap: 19px;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-top: 82px;
+ }
+ 
+ .image-container-compact {
+	box-sizing: border-box;
+	display: block;
+	width: 211px;
+	max-width: initial;
+	height: 248px;
+	border: none;
+	object-fit: cover;
+ }
+ 
+ .image-container-with-shadow {
+	box-sizing: border-box;
+	display: block;
+	width: 211px;
+	max-width: initial;
+	height: 248px;
+	border: none;
+	box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.25);
+	object-fit: cover;
+ }
+
+ /* 4 SECTION */
+ 
+ .real-estate-empire-section {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	min-width: 1440px;
+	padding-top: 56px;
+	padding-bottom: 59px;
+ }
+ 
+ .real-estate-heading-style {
+	flex: 0 0 auto;
+	align-self: center;
+	font: 700 38px 'Montserrat', sans-serif;
+	color: black;
+	text-align: center;
+ }
+ 
+ .real-estate-card_4 {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: row;
+	gap: 45px;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-top: 58px;
+	
+ }
+ 
+ .property-card-image {
+	box-sizing: border-box;
+	display: block;
+	width: 220px;
+	max-width: initial;
+	height: 534px;
+	border: none;
+	border-radius: 20px;
+	object-fit: cover;
+ }
+ 
+ .real-estate-description-container {
+	box-sizing: border-box;
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	width: 910px;
+ }
+ 
+ .property-image-container {
+	box-sizing: border-box;
+	display: block;
+	flex: 0 0 auto;
+	max-width: initial;
+	height: 534px;
+	border: none;
+	border-radius: 20px;
+	object-fit: cover;
+ }
+ 
+ .real-estate-empire-container {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 40px;
+ }
+ 
+ .real-estate-empire-info-box {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	max-width: 730px;
+ }
+ 
+ .real-estate-title {
+	flex: 0 0 auto;
+	font: 700 24px 'Montserrat';
+	color: black;
+ }
+ 
+ .property-description-style_4 {
+	flex: 0 0 auto;
+	align-self: stretch;
+	margin-top: 40px;
+	font: 400 18px 'Poppins';
+	color: rgba(98,97,97,1);
+	text-align: center;
+ }
+ 
+ 
+
+
+ 
+ 
+ 
+  
+
+ 
+ 
+ 
