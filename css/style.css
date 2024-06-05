@@ -16,19 +16,32 @@ body {
 	margin: auto;
 }
 
-/* Logo left */
-header {
+/* progressbar */
+.progressbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 100%;
+	background-color: red;
+	transform-origin: left center;
+	transform: scaleX(0);
+	transition: transform 0.2s ease;
+	z-index: 110;
+}
+
+/* header */
+.header_menu {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	width: 100%;
 }
 
-.logo {
-	left: 164px;
-	min-width: 740px;
-}
-
-.header-container {
+.header_logo {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
@@ -37,10 +50,10 @@ header {
 	height: 112px;
 	padding-right: 48px;
 	padding-left: 164px;
-	background: white;
+	background: transparent;
 }
 
-.property-icon {
+.logo_property {
 	box-sizing: border-box;
 	display: block;
 	width: 40px;
@@ -48,52 +61,145 @@ header {
 	margin-right: 15px;
 }
 
-.property-title {
+.property_icon_title {
 	flex: 0 0 auto;
 	margin-left: 14px;
 	font: 700 20px 'Poppins';
 	color: black;
 }
 
-.navbar-container {
+.navbar_container {
+	display: block;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
 	gap: 34px;
 	align-items: center;
 	justify-content: flex-start;
-	width: 100%;
-	padding: 47px 28px 754px;
-	background: url("../images/header_house.png") no-repeat 50% / cover;
-	border: none;
-
 }
 
-.navigation-link-style {
+.navbar_link {
 	flex: 0 0 auto;
-	font: 500 15px 'Poppins';
+	font: 700 15px 'Poppins';
 	color: black;
-	text-decoration: none;
+	list-style-type: none;
+	cursor: pointer;
 }
 
-/* Explore */
-.header_explore {
+/* footer */
+.property_footer {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	padding: 260px 204px 80px 164px;
+	background: #3456FE;
+}
+
+.property_footer_discription {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	padding-right: 205px;
+	margin-bottom: 30px	;
+}
+
+.property_info_footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.property_title_footer {
+	flex: 0 0 auto;
+	margin-left: 16px;
+	font: 700 20px 'Poppins';
+	color: white;
+}
+
+.property_description_footer {
+	box-sizing: border-box;
+	max-width: 375px;
+	margin-top: 30px;
+	font: 400 20px 'Poppins';
+	color: white;
+	text-align: left;
+}
+
+.footer_nav_block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+	flex: 0 0 auto;
+}
+
+.footer_title_bold {
+	font: 700 20px 'Montserrat';
+	color: white;
+}
+
+.footer_nav_container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 25px;
+}
+
+.footer_nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 17px;
+	box-sizing: border-box;
+	margin-top: 21px;
+	text-align: left;
+}
+
+.footer_nav_link{
+	font: 400 20px/33px 'Montserrat';
+	color: white;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+.footer_nav_container {
+	display: flex;
+	flex-direction: row;
+}
+
+/* SECTION Explore */
+.section_explore { 
+	display: flex;
+	flex-direction: row;
+}
+
+.explore_img {
+	width: 50%;
+	object-fit: cover;
+}
+
+.container_explore {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
 	justify-content: center;
 	padding: 121px 56px 181px 164px;
+	border: none;
 }
 
-.desert-oasis-heading {
+.explore_title {
 	flex: 0 0 auto;
-	font: 700 48px/62px 'Poppins';
+	font: 700 48px 'Poppins';
 	color: black;
 	text-align: left;
 }
 
-.property-description-text-style_header {
+.explore_discription {
 	flex: 0 0 auto;
 	margin-top: 35px;
 	font: 400 18px/28.5px 'Poppins';
@@ -112,6 +218,7 @@ header {
 	background: #3456FE;
 	border: none;
 	box-shadow: 15px 15px 30px rgba(50, 80, 220, 0.25);
+	cursor: pointer;
 
 	margin-top: 35px;
 	transition: 0.3s ease-in-out;
@@ -123,234 +230,13 @@ header {
 	background-color: #3456fe1a;
 }
 
-/* footer */
-
-.property_footer_city {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	align-items: flex-end;
-	box-sizing: border-box;
-	height: 1150px;
-	background: url("../images/city_footer.png") no-repeat, #3456FE;
-	background-size: cover;
-}
-
-.property-hub-style {
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	justify-content: flex-start;
-
-	padding: 137px 204px 80px 164px;
-	background: #3456FE;
-}
-
-.strategic-container {
-	box-sizing: border-box;
-	width: 740px;
-	padding-right: 80px;
-	padding-left: 80px;
-	background: black;
-}
-
-.property-services-section1 {
-	box-sizing: border-box;
-	width: 500px;
-	padding-top: 126px;
-	padding-bottom: 208px;
-}
-
-.property-services-section {
-	box-sizing: border-box;
-	width: 100%;
-}
-
-.hero-text {
-	font: 700 48px 'Montserrat';
-	color: white;
-
-}
-
-.property-description-style {
-	box-sizing: border-box;
-	width: 100%;
-	margin-top: 20px;
-	font: 400 20px 'Poppins';
-	color: white;
-	text-align: left;
-
-}
-
-.email_form_container {
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: row;
-	gap: 8px;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	padding-left: 33px;
-	margin-top: 33px;
-	background: white;
-	border-radius: 10px;
-}
-
-.email_input {
-	height: 100%;
-	width: 100%;
-	font: 400 15px 'Montserrat';
-	color: gray;
-	border: none;
-	outline: none;
-
-}
-
-.btn_email_send {
-	flex: 0 0 auto;
-	border: none;
-	border-radius: 10px;
-	font: 700 20px "Montserrat";
-	background: #3456FE;
-	box-sizing: border-box;
-	display: block;
-	width: 149px;
-	height: 48px;
-	color: white;
-	cursor: pointer;
-
-	transition: 0.3s ease-in-out;
-}
-
-.btn_email_send:hover,
-.btn_email_send:focus {
-	color: #3456FE;
-	background-color: #3456fe3d;
-}
-
-.strategic-container {
-	box-sizing: border-box;
-	min-width: 740px;
-	padding-right: 80px;
-	padding-left: 80px;
-	background: black;
-}
-
-.property-services-section1 {
-	box-sizing: border-box;
-	max-width: 497px;
-	padding-top: 126px;
-	padding-bottom: 208px;
-}
-
-.property-services-section {
-	box-sizing: border-box;
-	width: 100%;
-}
-
-.hero-text {
-	font: 700 48px 'Montserrat';
-	color: white;
-
-}
-
-.property-card {
-	box-sizing: border-box;
-	flex: 0 0 auto;
-	padding-right: 205px;
-}
-
-.property-info-container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-.property-title_footer {
-	flex: 0 0 auto;
-	margin-left: 16px;
-	font: 700 20px 'Poppins';
-	color: white;
-}
-
-.property-description-style {
-	box-sizing: border-box;
-	max-width: 375px;
-	margin-top: 30px;
-	font: 400 20px 'Poppins';
-	color: white;
-	text-align: left;
-}
-
-.property-listing-info-box {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	box-sizing: border-box;
-	flex: 0 0 auto;
-	padding-right: 15px;
-}
-
-.header-title-bold {
-	font: 700 20px 'Montserrat';
-	color: white;
-}
-
-.international-site-list {
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
-	gap: 17px;
-
-	box-sizing: border-box;
-	/* max-width: 137px; */
-	margin-top: 21px;
-	font: 400 20px/33px 'Montserrat';
-	color: white;
-	text-align: left;
-}
-
-
-.partner-list-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	box-sizing: border-box;
-	flex: 0 0 auto;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-
-.partner-sites-list {
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
-	gap: 17px;
-
-	box-sizing: border-box;
-	width: 100%;
-	margin-top: 21px;
-	font: 400 20px/33px 'Montserrat';
-	color: white;
-	text-align: left;
-}
-
-
 /* 1 SECTION */
-
 .section_house_container {
 	background: #F8F8FA;
 	padding: 100px 164px 66px 164px;
 }
 
-.description_card {
+.description_house_container {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
@@ -358,14 +244,14 @@ header {
 	gap: 175px;
 }
 
-.title_description_card {
+.house_container_title {
 	flex: 0 0 auto;
 	font: 700 38px 'Poppins';
 	color: black;
 	text-align: left;
 }
 
-.text_description_card {
+.house_container_text {
 	box-sizing: border-box;
 	max-width: 506px;
 	font: 400 18px 'Poppins';
@@ -422,8 +308,7 @@ header {
 }
 
 /* 2 SECTION */
-
-.real-estate-empire-layout {
+.section_interior_house {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -432,7 +317,7 @@ header {
 	padding: 34px 0px 58px 164px;
 }
 
-.hero-text-heading {
+.interior_house_title {
 	box-sizing: border-box;
 	flex: 0 0 auto;
 	font: 700 38px "Poppins";
@@ -440,7 +325,7 @@ header {
 	text-align: left;
 }
 
-.real-estate-card {
+.interior_house_card {
 	box-sizing: border-box;
 	display: flex;
 	flex-wrap: nowrap;
@@ -452,7 +337,7 @@ header {
 	overflow: hidden;
 }
 
-.real-estate-info-container {
+.interior_house_info {
 	box-sizing: border-box;
 	display: flex;
 	flex: 0 0 auto;
@@ -462,14 +347,14 @@ header {
 	padding: 154px 96px 34px 0px;
 }
 
-.empire-title {
+.interior_house_text {
 	box-sizing: border-box;
 	flex: 0 0 auto;
 	font: 700 24px 'Montserrat';
 	color: black;
 }
 
-.property-description-text-style {
+.interior_house_discription {
 	box-sizing: border-box;
 	flex: 0 0 auto;
 	max-width: 346px;
@@ -479,16 +364,17 @@ header {
 	text-align: left;
 }
 
-.property-details-card {
+.interior_house_images {
 	box-sizing: border-box;
 	display: flex;
 	flex: 0 0 auto;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
+	gap: 56px;
 }
 
-.image-container-rounded {
+.interior_house_image {
 	box-sizing: border-box;
 	display: block;
 	width: 616px;
@@ -498,30 +384,8 @@ header {
 	object-fit: cover;
 }
 
-.strategic-info-box {
-	box-sizing: border-box;
-	display: flex;
-	flex: 0 0 auto;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: flex-start;
-	margin-left: 56px;
-
-}
-
-.rounded-image-container {
-	box-sizing: border-box;
-	display: block;
-	max-width: 616px;
-	height: 456px;
-	border: none;
-	border-radius: 20px;
-	object-fit: cover;
-}
-
 /* 3 SECTION  */
-
-.royal-estate-style {
+.section_house_and_interior {
 	box-sizing: border-box;
 	width: 100%;
 	padding-top: 42px;
@@ -529,7 +393,7 @@ header {
 	background: #060928;
 }
 
-.hero-title-text-style {
+.house_and_interior_title {
 	padding-right: 48px;
 	padding-left: 163px;
 	font: 70 38px 'Poppins';
@@ -538,7 +402,7 @@ header {
 	letter-spacing: 0.76px;
 }
 
-.strategic-home-layout {
+.house_and_interior_container {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
@@ -547,21 +411,58 @@ header {
 	margin-top: 58px;
 }
 
-.real-estate-empire-card {
+.house_and_interior_big_img {
 	box-sizing: border-box;
+	width: 616px;
+	height: 798px;
+	border-radius: 20px;
+	object-fit: cover;
+}
+
+.house_and_interior_card {
 	display: flex;
+	flex-wrap: wrap;
 	flex: 0 0 auto;
 	flex-direction: column;
 	align-items: stretch;
-	justify-content: flex-start;
-	width: 616px;
-	height: 798px;
-	background: url("../images/house7.png") no-repeat 50% / cover;
-	border: none;
-	border-radius: 20px;
+	align-self: center;
+	justify-content: center;
+	margin-left: 2px;
+	position: absolute;
+	left: 26%;
 }
 
-.image_slider_container {
+.house_and_interior_container_discription {
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	margin: 0 auto;
+	margin-left: 50%;
+	max-width: 480px;
+}
+
+.house_and_interior_text {
+	font: 700 24px 'Montserrat';
+	color: white;
+}
+
+.house_and_interior_discription {
+	box-sizing: border-box;
+	margin-top: 40px;
+	font: 400 18px 'Poppins';
+	color: white;
+	text-align: left;
+}
+
+.gallery_image_rising_container {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: row;
+	gap: 19px;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.image_rising_container {
 	box-sizing: border-box;
 	display: block;
 	flex: 0 0 auto;
@@ -573,69 +474,15 @@ header {
 	transition: 0.3s ease-in-out;
 }
 
-.image_slider_container--active {
+.image_rising_container--active {
 	margin-top: 57px;
 	margin-bottom: 25px;
 }
 
-.real-estate-card1 {
-	display: flex;
-	flex-wrap: wrap;
-	flex: 1 0 auto;
-	flex-direction: column;
-	align-items: stretch;
-	align-self: center;
-	justify-content: center;
-	margin-left: 2px;
-	position: absolute;
-	left: 20%;
-
-}
-
-.real-estate-card_3 {
-	box-sizing: border-box;
-	flex: 0 0 auto;
-	margin: 0 auto;
-	margin-left: 50%;
-	max-width: 480px;
-}
-
-.real-estate-empire-heading {
-	font: 700 24px 'Montserrat';
-	color: white;
-}
-
-.property-description-style_3 {
-	box-sizing: border-box;
-	width: 100%;
-	margin-top: 40px;
-	font: 400 18px 'Poppins';
-	color: white;
-	text-align: left;
-}
-
-.property-gallery-container {
-	display: flex;
-	flex: 0 0 auto;
-	flex-direction: row;
-	gap: 19px;
-	align-items: flex-start;
-	justify-content: flex-start;
-}
-
-.image-container-compact {
-	box-sizing: border-box;
-	display: block;
-	width: 211px;
-	max-width: initial;
-	height: 248px;
-	border: none;
-	object-fit: cover;
-}
 
 /* 4 SECTION */
 
-.real-estate-empire-section {
+.section_interior_slider {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -645,7 +492,7 @@ header {
 	padding-bottom: 59px;
 }
 
-.real-estate-heading-style {
+.interior_slider_title {
 	flex: 0 0 auto;
 	align-self: center;
 	font: bold 38px 'Montserrat';
@@ -665,18 +512,14 @@ header {
 .img_conrainer_interior_slider {
 	width: 100%;
 	display: flex;
-	flex-grow: 1;
 	text-align: center;
-
 	flex-direction: row;
 	gap: 45px;
 	justify-content: center;
-	flex-wrap: nowrap;
 	overflow: hidden;
-	position: relative;
 }
 
-.property-card-image {
+.img_interior_slider {
 	box-sizing: border-box;
 	display: block;
 	width: 100%;
@@ -686,7 +529,7 @@ header {
 	object-fit: cover;
 }
 
-.real-estate-empire-info-box {
+.interior_slider_container_discriptiont {
 	margin-top: 40px;
 	box-sizing: border-box;
 	display: flex;
@@ -696,17 +539,101 @@ header {
 	max-width: 730px;
 }
 
-.real-estate-title {
+.interior_slider_text {
 	flex: 0 0 auto;
 	font: bold 24px 'Montserrat';
 	color: black;
 }
 
-.property-description-style_4 {
+.interior_slider_discriptiont {
 	flex: 0 0 auto;
 	align-self: stretch;
 	margin-top: 40px;
 	font: 400 18px 'Poppins';
 	color: rgba(98, 97, 97, 1);
 	text-align: center;
+}
+
+/* SECTION EMAIL INPUT */
+.property_email_container {
+	position: relative;
+	background: #3456FE;
+}
+
+.email_city_img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.email_container_form {
+	box-sizing: border-box;
+	width: 740px;
+	background: black;
+	position: absolute;
+	right: 0;
+	bottom: -123px;
+	padding: 126px 80px 208px;
+}
+
+.property_email_discription {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.email_title {
+	font: 700 48px 'Montserrat';
+	color: white;
+}
+
+.email_description {
+	box-sizing: border-box;
+	width: 100%;
+	margin-top: 20px;
+	font: 400 20px 'Poppins';
+	color: white;
+	text-align: left;
+}
+
+.email_form_container {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 33px;
+	margin-top: 33px;
+	background: white;
+	border-radius: 10px;
+}
+
+.email_input {
+	height: 100%;
+	width: 100%;
+	font: 400 15px 'Montserrat';
+	color: gray;
+	border: none;
+	outline: none;
+}
+
+.btn_email_send {
+	flex: 0 0 auto;
+	border: none;
+	border-radius: 10px;
+	font: 700 20px "Montserrat";
+	background: #3456FE;
+	box-sizing: border-box;
+	display: block;
+	width: 149px;
+	height: 48px;
+	color: white;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+
+.btn_email_send:hover,
+.btn_email_send:focus {
+	color: #3456FE;
+	background-color: #3456fe3d;
 }
