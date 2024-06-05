@@ -80,10 +80,14 @@ body {
 
 .navbar_link {
 	flex: 0 0 auto;
-	font: 700 15px 'Poppins';
-	color: black;
 	list-style-type: none;
 	cursor: pointer;
+}
+
+.navbar_link a {
+	text-decoration: none;
+	color: black;
+	font: 700 15px 'Poppins';
 }
 
 /* footer */
@@ -637,3 +641,34 @@ body {
 	color: #3456FE;
 	background-color: #3456fe3d;
 }
+
+/* MEDIA */
+/* @media (min-width: 1200px) and (max-width: 1399.98px) {
+	* {
+		background-color: red;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	* {
+		background-color: blue;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	* {
+		background-color: red;
+	}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+	* {
+		background-color: blue;
+	}
+}
+
+@media (max-width: 575.98px) {
+	* {
+		background-color: red;
+	}
+} */
