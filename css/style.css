@@ -106,8 +106,8 @@ body {
 .property_footer_discription {
 	box-sizing: border-box;
 	flex: 0 0 auto;
-	padding-right: 205px;
-	margin-bottom: 30px	;
+	padding-right: 150px;
+	margin-bottom: 30px;
 }
 
 .property_info_footer {
@@ -163,7 +163,7 @@ body {
 	text-align: left;
 }
 
-.footer_nav_link{
+.footer_nav_link {
 	font: 400 20px/33px 'Montserrat';
 	color: white;
 	list-style-type: none;
@@ -176,7 +176,7 @@ body {
 }
 
 /* SECTION Explore */
-.section_explore { 
+.section_explore {
 	display: flex;
 	flex-direction: row;
 }
@@ -417,15 +417,14 @@ body {
 
 .house_and_interior_big_img {
 	box-sizing: border-box;
-	width: 616px;
-	height: 798px;
+	max-width: 616px;
+	max-height: 798px;
 	border-radius: 20px;
 	object-fit: cover;
 }
 
 .house_and_interior_card {
 	display: flex;
-	flex-wrap: wrap;
 	flex: 0 0 auto;
 	flex-direction: column;
 	align-items: stretch;
@@ -434,6 +433,7 @@ body {
 	margin-left: 2px;
 	position: absolute;
 	left: 26%;
+	overflow: hidden;
 }
 
 .house_and_interior_container_discription {
@@ -531,6 +531,7 @@ body {
 	border: none;
 	border-radius: 20px;
 	object-fit: cover;
+	pointer-events: none;
 }
 
 .interior_slider_container_discriptiont {
@@ -571,7 +572,7 @@ body {
 
 .email_container_form {
 	box-sizing: border-box;
-	width: 740px;
+	max-width: 740px;
 	background: black;
 	position: absolute;
 	right: 0;
@@ -643,32 +644,150 @@ body {
 }
 
 /* MEDIA */
-/* @media (min-width: 1200px) and (max-width: 1399.98px) {
-	* {
-		background-color: red;
+/* @media (min-width: 1200px) and (max-width: 1399.98px) { */
+@media (width < 1399.98px) {
+
+	.interior_house_card {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.interior_house_info {
+		flex-direction: column;
+		padding: 34px 96px 34px 0px;
+	}
+
+	.house_and_interior_card {
+		left: 20%;
 	}
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
-	* {
-		background-color: blue;
+/* @media (min-width: 992px) and (max-width: 1199.98px) { */
+@media (width < 1199.98px) {
+	
+	.section_house_container {
+		padding: 50px 87px 33px 87px;
+	}
+
+	.description_house_container {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.house_and_interior_card {
+		left: 7%;
+	}
+
+}
+
+/* @media (min-width: 768px) and (max-width: 991.98px) { */
+@media (width < 991.98px) {
+
+	.explore_img {
+		width: 0;
+	}
+
+	.header_menu {
+		align-items: flex-start;
+	}
+
+	.navbar_container {
+		margin-top: 15px;
+		flex-direction: column;
+		gap: 15px;
+		align-items: center;
+	}
+
+	.house_and_interior_container_discription {
+		margin-left: 25%;
+		max-width: 480px;
+	}
+
+	.house_and_interior_card { 
+		width: 92%;
+		overflow: hidden;
+	}
+
+}
+
+@media (width < 767.98px) {
+
+	.header_logo {
+		padding-left: 50px;
+	}
+
+	.container_explore {
+		padding: 120px 50px 25px;
+	}
+
+	.house_and_interior_title {
+		padding-right: 20px;
+		padding-left: 100px;
+	}
+
+	.structure_card_container {
+		flex-direction: column;
+		padding: 10px;
+	}
+
+	.section_interior_house {
+		padding: 30px 0px 50px 100px;
+	}
+
+	.house_and_interior_big_img {
+		max-width: 70%;
+	}
+
+	.email_city_img {
+		width: 0;
+	}
+
+	.email_container_form {
+		width: 100%;
+		position: relative;
+		bottom: 0;
+		margin: 0 auto;
+		padding: 100px 80px 200px;
+	}
+
+	.property_footer {
+		padding: 80px 100px;
+	}
+
+	.property_footer_discription {
+		padding-right: 0;
 	}
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-	* {
-		background-color: red;
+@media (width < 575.98px) {
+	
+	.container_explore {
+		padding: 120px 25px 25px;
 	}
-}
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-	* {
-		background-color: blue;
-	}
-}
+	.navbar_container {
+		opacity: 0;
+	}	
 
-@media (max-width: 575.98px) {
-	* {
-		background-color: red;
+	.section_house_container {
+		padding: 10px;
 	}
-} */
+
+	.customer_card {
+		width: 100%;
+	}
+
+	.customer_img {
+		max-height: none;
+		max-width: 100%;
+	}
+
+	.section_interior_house {
+		padding: 30px 0px 50px 10px;
+	}
+
+	.interior_house_discription {
+		width: 100%;
+	}
+
+}

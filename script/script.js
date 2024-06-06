@@ -44,7 +44,7 @@ slider.addEventListener('mousemove', (event) => {
   if (!isDragging) return;
   event.preventDefault();
   const x = event.pageX - slider.offsetLeft;
-  const walk = (x - startX) ; 
+  let walk = (x - startX) ; 
   slider.scrollLeft = scrollLeft - walk;
 });
 
