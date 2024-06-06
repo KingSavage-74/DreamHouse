@@ -48,4 +48,18 @@ slider.addEventListener('mousemove', (event) => {
   slider.scrollLeft = scrollLeft - walk;
 });
 
-//
+// 4. меню навигации
+const menu = document.querySelector(".navbar_container");
+const burgerBtn = document.querySelector(".logo_property");
+const navLink = document.querySelectorAll(".navbar_link");
+
+burgerBtn.addEventListener("click", ()=> {
+    menu.classList.toggle("navbar_container_open")
+})
+
+navLink.forEach((event) => {
+  event.addEventListener("click", ()=> {
+    menu.classList.remove("navbar_container_open")
+})
+})
+

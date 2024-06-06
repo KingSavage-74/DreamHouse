@@ -51,6 +51,7 @@ body {
 	padding-right: 48px;
 	padding-left: 164px;
 	background: transparent;
+	z-index: 100;
 }
 
 .logo_property {
@@ -69,6 +70,16 @@ body {
 }
 
 .navbar_container {
+	background: transparent;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(-100%);
+	transition: transform 0.3s ease;
+}
+
+.navbar_container_list {
 	display: block;
 	box-sizing: border-box;
 	display: flex;
@@ -88,6 +99,13 @@ body {
 	text-decoration: none;
 	color: black;
 	font: 700 15px 'Poppins';
+	transition: 0.3s ease-in-out;
+
+}
+
+.navbar_link:hover a,
+.navbar_link:focus a {
+	color: #626161;
 }
 
 /* footer */
@@ -149,7 +167,7 @@ body {
 .footer_nav_container {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	gap: 25px;
 }
 
@@ -164,10 +182,20 @@ body {
 }
 
 .footer_nav_link {
+	list-style-type: none;
+}
+
+.footer_nav_link a {
 	font: 400 20px/33px 'Montserrat';
 	color: white;
-	list-style-type: none;
+	text-decoration: none;
 	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+
+.footer_nav_link a:hover,
+.footer_nav_link a:focus {
+	color: rgba(255, 255, 255, 0.425);
 }
 
 .footer_nav_container {
@@ -395,6 +423,7 @@ body {
 	padding-top: 42px;
 	padding-bottom: 104px;
 	background: #060928;
+	position: relative;
 }
 
 .house_and_interior_title {
@@ -413,6 +442,7 @@ body {
 	align-items: flex-start;
 	justify-content: flex-start;
 	margin-top: 58px;
+	position: relative;
 }
 
 .house_and_interior_big_img {
@@ -464,6 +494,7 @@ body {
 	gap: 19px;
 	align-items: flex-start;
 	justify-content: flex-start;
+	overflow: hidden;
 }
 
 .image_rising_container {
@@ -520,6 +551,7 @@ body {
 	flex-direction: row;
 	gap: 45px;
 	justify-content: center;
+	align-content: center;
 	overflow: hidden;
 }
 
@@ -527,10 +559,10 @@ body {
 	box-sizing: border-box;
 	display: block;
 	width: 100%;
-	height: 534px;
+	max-height: 534px;
 	border: none;
 	border-radius: 20px;
-	object-fit: cover;
+	object-fit: contain;
 	pointer-events: none;
 }
 
@@ -654,6 +686,7 @@ body {
 
 	.interior_house_info {
 		flex-direction: column;
+		width: 100%;
 		padding: 34px 96px 34px 0px;
 	}
 
@@ -664,7 +697,7 @@ body {
 
 /* @media (min-width: 992px) and (max-width: 1199.98px) { */
 @media (width < 1199.98px) {
-	
+
 	.section_house_container {
 		padding: 50px 87px 33px 87px;
 	}
@@ -684,18 +717,59 @@ body {
 @media (width < 991.98px) {
 
 	.explore_img {
-		width: 0;
+		display: none;
 	}
 
 	.header_menu {
 		align-items: flex-start;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 	}
 
 	.navbar_container {
-		margin-top: 15px;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 90;
+		padding-top: 100px;
+		background: darkblue;
+		color: white;
 		flex-direction: column;
-		gap: 15px;
 		align-items: center;
+		justify-content: center;
+		transform: translateY(-100%);
+		transition: transform 0.3s ease;
+	}
+
+	.navbar_container_open {
+		transform: translateY(0%);
+	}
+
+	.navbar_container_open .navbar_link a {
+		color: white;
+		font: 700 24px 'Poppins';
+	}
+
+	.navbar_container_open .navbar_link a:hover,
+	.navbar_container_open .navbar_link a:focus {
+		color: rgba(255, 255, 255, 0.37);
+		font: 700 42px 'Poppins';
+	}
+
+	.navbar_container_list { 
+		list-style-type: none;
+		padding: 0px;
+		margin: 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+		text-align: center;
+		background: transparent;
 	}
 
 	.house_and_interior_container_discription {
@@ -703,7 +777,7 @@ body {
 		max-width: 480px;
 	}
 
-	.house_and_interior_card { 
+	.house_and_interior_card {
 		width: 92%;
 		overflow: hidden;
 	}
@@ -745,29 +819,27 @@ body {
 	.email_container_form {
 		width: 100%;
 		position: relative;
-		bottom: 0;
+		top: 0;
 		margin: 0 auto;
 		padding: 100px 80px 200px;
 	}
 
 	.property_footer {
-		padding: 80px 100px;
+		padding: 25px 0;
 	}
 
 	.property_footer_discription {
 		padding-right: 0;
+		width: 100%;
 	}
+
 }
 
 @media (width < 575.98px) {
-	
+
 	.container_explore {
 		padding: 120px 25px 25px;
 	}
-
-	.navbar_container {
-		opacity: 0;
-	}	
 
 	.section_house_container {
 		padding: 10px;
@@ -783,11 +855,45 @@ body {
 	}
 
 	.section_interior_house {
-		padding: 30px 0px 50px 10px;
+		padding: 30px 0 0 10px;
+	}
+
+	.interior_house_info {
+		padding: 15px 0;
 	}
 
 	.interior_house_discription {
 		width: 100%;
 	}
+
+	.interior_house_images {
+		display: none;
+	}
+
+	.house_and_interior_big_img {
+		display: none;
+	}
+
+	.section_house_and_interior {
+		padding: 0;
+	}
+
+	.house_and_interior_title {
+		padding: 0;
+	}
+
+	.house_and_interior_card {
+		position: relative;
+	}
+
+	.house_and_interior_container_discription {
+		margin-left: 0;
+		max-width: 100%;
+	}
+
+	.email_container_form {
+		padding: 10px 0px 20px;
+	}
+
 
 }
