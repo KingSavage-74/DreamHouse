@@ -54,6 +54,11 @@ body {
 	z-index: 100;
 }
 
+.header_logo_link {
+	text-decoration: none;
+	color: black;
+}
+
 .logo_property {
 	box-sizing: border-box;
 	display: block;
@@ -109,6 +114,12 @@ body {
 }
 
 /* footer */
+
+.footer_logo_link {
+	text-decoration: none;
+	color: white;
+}
+
 .property_footer {
 	box-sizing: border-box;
 	display: flex;
@@ -564,6 +575,7 @@ body {
 	border-radius: 20px;
 	object-fit: contain;
 	pointer-events: none;
+
 }
 
 .interior_slider_container_discriptiont {
@@ -652,6 +664,7 @@ body {
 	color: gray;
 	border: none;
 	outline: none;
+	cursor: pointer;
 }
 
 .btn_email_send {
